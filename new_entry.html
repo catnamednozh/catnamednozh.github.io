@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <script src="script/jquery-3.6.0.min.js"></script>
+  <script src="script/script.js"></script>
+  <title>Home Page</title>
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" id="appname">Logo</a>
+    <a id="envelope"><img src="images/envelope.png" alt="envelope"></a>
+    <a id="message"><img src="images/envelope_unread.png" alt="envelope with unread message"
+        onclick="openChatRequest(), readMessage()"></a>
+  </header>
+
+  <main>
+
+    <nav id="mySidenav" class="sidenav">
+      <a id="add" href="new_entry.html">&#x2295</a>
+      <a class="selected" href="new_entry.html" id="date1">Thursday, 21/10/2021</a>
+      <a class="past" href="wednesday_new.html" id="date2">Wednesday, 20/10/2021</a>
+      <a class="past" href="tuesday_new.html" id="date3">Tuesday, 19/10/2021</a>
+    </nav>
+
+    <section>
+
+      <div id="journal">
+
+        <div class="btn-group">
+          <button onclick="openAudio()">Audio</button>
+          <button onclick="openVideo()">Video </button>
+          <button onclick="openImage()">Image</button>
+          <button onclick="openText()">Text</button>
+        </div>
+
+        <div id="entries">
+
+          <div id="audio_entry">
+            <img src="images/audio.png" alt="audio message image">
+          </div>
+
+          <div id="video_entry">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8TCUgy00Sso;" title="YouTube video player" mute="1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <div id="image_entry">
+            <img src="images/cushion.jpg" alt="image of a sofa with a cushion under it">
+          </div>
+
+          <div id="text_entry">
+            <textarea id="text" name="text"></textarea><br>
+          </div>
+
+        </div>
+
+        <button id="save">Save</button>
+
+      </div>
+
+      <div id="notification">
+        <p>Someone request a chat with you</p>
+        <a href="chat.html"><button>Accept</button></a>
+        <button onclick="closeChatRequest()">Decline</button>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+
+</html>
